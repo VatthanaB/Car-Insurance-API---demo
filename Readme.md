@@ -1,5 +1,3 @@
-Sure, I can help you format your README file nicely. Here's an improved version of your README with proper formatting and structure:
-
 # Car Insurance API
 
 This is a simple Express.js application that provides APIs for calculating car value, risk rating based on claim history, and insurance premium quotes.
@@ -79,5 +77,3 @@ npm start
 ```
 
 Remember that the server, by default, runs on port 5000. If you want to change the port, you can do so by modifying the `port` variable in `server.js`.
-
-Feel free to customize this README further if needed, and provide any additional information about your project or usage instructions.
