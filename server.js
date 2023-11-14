@@ -190,3 +190,6 @@ app.post("/calculate_quote", (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+
+//TEST COMMENT BY FM - To be deleted
