@@ -2,6 +2,15 @@
 
 This is a simple Express.js application that provides APIs for calculating car value, risk rating based on claim history, and insurance premium quotes.
 
+## Technologies Used
+
+- Node.js
+- Express.js
+- Mocha (for testing)
+- Chai (for assertions in testing)
+- Axios (for making HTTP requests)
+- Body-parser (for parsing request bodies)
+
 ## Setup
 
 To get started, follow these steps:

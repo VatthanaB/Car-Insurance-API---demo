@@ -42,6 +42,7 @@ function calculateCarValue(model, year) {
     const value =
       model
         .split("")
+        // charCodeAt() will return the ASCII code of the character and we subtract the ASCII code of "A" from it and add 1 to get the value of the character
         .map((char) => char.charCodeAt(0) - "A".charCodeAt(0) + 1)
         .reduce((acc, curr) => acc + curr, 0) *
         100 +
