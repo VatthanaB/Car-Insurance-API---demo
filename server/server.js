@@ -96,6 +96,8 @@ function calculateRiskRating(claimHistory) {
     let riskRating = 0;
 
     for (const keyword of keywords) {
+      // For each keyword, a new regular expression object is created.
+      // The "g" flag means the search should be global (i.e., it should find all matches rather than stopping after the first match), and the "i" flag means the search should be case-insensitive.
       const keywordRegex = new RegExp(keyword, "gi");
       const matches = claimHistory.match(keywordRegex);
       if (matches) {

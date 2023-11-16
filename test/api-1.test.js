@@ -162,7 +162,7 @@ describe("Claim History to Risk Rating API", () => {
   it("should calculate risk rating correctly", async () => {
     const inputData = {
       claimHistory:
-        "My only claim was a crash into my house's garage door that left a scratch on my car. There are no other crash just a bump.",
+        "My only claim was a crashed into my house's garage door that left a scratching on my car. There are no other crash just a bump.",
     };
 
     const response = await axios.post(
