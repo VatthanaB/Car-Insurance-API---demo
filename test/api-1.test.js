@@ -1,7 +1,6 @@
-const chai = require("chai");
-const axios = require("axios");
-const { expect } = chai;
-
+import chai from "chai";
+import axios from "axios";
+import { expect } from "chai";
 // // TEST API 1 - Calculate car value
 
 // The describe function is used to group related tests. The first argument is a string that describes the group of tests. In this case, the string is "Car Value API", indicating that the tests inside this describe block are all related to the Car Value API.
