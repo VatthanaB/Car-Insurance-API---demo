@@ -2,9 +2,9 @@ import express from "express";
 import bodyParser from "body-parser";
 const router = express.Router();
 
-// API 3. Calculate the "Premium" based on the "Risk Rating"
+// API 3. Calculate the "Premium insurance" based on the "Risk Rating"
 
-// This function will calculate the premium based on the car value and risk rating
+// This function will calculate the premium insurance based on the car value and risk rating
 function calculateQuote(carValue, riskRating) {
   try {
     // Check for invalid input
@@ -20,10 +20,12 @@ function calculateQuote(carValue, riskRating) {
       return { error: "Risk rating must be between 1 and 5" };
     }
 
+    // Calculate the premium insurance based on the business rules
     const yearlyPremium = (carValue * riskRating) / 100;
+    // Calculate the monthly premium insurance by dividing the yearly premium by 12
     const monthlyPremium = yearlyPremium / 12;
 
-    // Return the premium as an object with 2 decimal places
+    // Return the premium insurance as an object with 2 decimal places
     return {
       monthly_premium: monthlyPremium.toFixed(2),
       yearly_premium: yearlyPremium.toFixed(2),

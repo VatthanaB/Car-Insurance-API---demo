@@ -1,7 +1,8 @@
 import chai from "chai";
 import axios from "axios";
 import { expect } from "chai";
-// // TEST API 1 - Calculate car value
+
+// // TEST API 1 - Calculate car value 🚩
 
 // The describe function is used to group related tests. The first argument is a string that describes the group of tests. In this case, the string is "Car Value API", indicating that the tests inside this describe block are all related to the Car Value API.
 // The second argument is a function that contains the tests. The function is called a callback function. The callback function is executed when the test is run.
@@ -144,18 +145,9 @@ describe("Car Value API", () => {
   });
 });
 
-// TEST API  2 - Claim History to Risk Rating
+// TEST API  2 - Claim History to Risk Rating  🚩
 describe("Claim History to Risk Rating API", () => {
   const apiUrl = "http://localhost:5000";
-  before(() => {
-    // Start your API server here (e.g., using a child process or a testing framework like Supertest)
-    // You can start your API in a before hook to ensure it's running before testing.
-  });
-
-  after(() => {
-    // Stop your API server here if needed
-    // You can stop your API in an after hook to clean up after testing.
-  });
 
   // TEST 1
   it("should calculate risk rating correctly", async () => {
@@ -263,7 +255,7 @@ describe("Claim History to Risk Rating API", () => {
   });
 });
 
-// TEST API 3 - Risk Rating to Premium with chai http
+// TEST API 3 - Risk Rating to Premium with chai http  🚩
 
 describe("Car Value and Risk Rating to Quote API", () => {
   const apiUrl = "http://localhost:5000"; // Adjust the URL to match the API's endpoint

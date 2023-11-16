@@ -10,6 +10,9 @@ function calculateCarValue(model, year) {
     if (!model) {
       return { error: "Model is required" };
     }
+    if (!year) {
+      return { error: "Year is required" };
+    }
 
     if (year < 0) {
       return { error: "Year cannot be negative" };
@@ -18,10 +21,6 @@ function calculateCarValue(model, year) {
     // Remove spaces and convert the model name to uppercase
     model = model.replace(/ /g, "").toUpperCase();
 
-    // Check for empty model or year
-    if (model.length === 0 || year.length === 0) {
-      return { error: "Invalid input" };
-    }
     // Check for invalid model or year
     // So, this regular expression will match any string that consists only of one or more uppercase letters and nothing else like "HELLO" not " HELLO12"
     if (!model.match(/^[A-Z]+$/) || isNaN(year)) {
