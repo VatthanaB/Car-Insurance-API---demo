@@ -1,5 +1,5 @@
 import express from "express";
-import bodyParser from "body-parser";
+
 const router = express.Router();
 
 // API 3. Calculate the "Premium insurance" based on the "Risk Rating"
