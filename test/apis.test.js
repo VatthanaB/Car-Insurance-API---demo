@@ -1,6 +1,10 @@
 import chai from "chai";
 import axios from "axios";
 import { expect } from "chai";
+import dotenv from "dotenv";
+dotenv.config();
+
+const URL = process.env.URL || "http://localhost:5000";
 
 // using chai :
 // describe keyword = group of tests
@@ -12,7 +16,7 @@ import { expect } from "chai";
 // The describe function is used to group related tests. The first argument is a string that describes the group of tests. In this case, the string is "Car Value API", indicating that the tests inside this describe block are all related to the Car Value API.
 // The second argument is a function that contains the tests. The function is called a callback function. The callback function is executed when the test is run.
 describe("Car Value API", () => {
-  const apiUrl = "http://localhost:5000";
+  const apiUrl = URL;
 
   // TEST 1
   it("should calculate car value correctly", async () => {
@@ -152,7 +156,7 @@ describe("Car Value API", () => {
 
 // TEST API  2 - Claim History to Risk Rating  🚩
 describe("Claim History to Risk Rating API", () => {
-  const apiUrl = "http://localhost:5000";
+  const apiUrl = URL;
 
   // TEST 1
   it("should calculate risk rating correctly", async () => {
@@ -263,7 +267,7 @@ describe("Claim History to Risk Rating API", () => {
 // TEST API 3 - Risk Rating to Premium with chai http  🚩
 
 describe("Car Value and Risk Rating to Quote API", () => {
-  const apiUrl = "http://localhost:5000"; // Adjust the URL to match the API's endpoint
+  const apiUrl = URL; // Adjust the URL to match the API's endpoint
 
   // TEST 1
   it("should calculate quote correctly", async () => {
