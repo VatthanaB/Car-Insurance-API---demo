@@ -14,6 +14,9 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 // API 1. Calculate car value
 app.use("/calculate_car_value", CarValueAPI);
 
