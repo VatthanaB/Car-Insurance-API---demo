@@ -9,15 +9,6 @@ const router = express_1.default.Router();
 // This function will calculate the car value based on the model and year
 function calculateCarValue(model, year) {
     try {
-        if (!model) {
-            return { error: "Model is required" };
-        }
-        if (!year) {
-            return { error: "Year is required" };
-        }
-        if (year < 0) {
-            return { error: "Year cannot be negative" };
-        }
         // Remove spaces and convert the model name to uppercase
         model = model.replace(/ /g, "").toUpperCase();
         // Check for invalid model or year
@@ -50,6 +41,18 @@ function calculateCarValue(model, year) {
 router.post("/", (req, res) => {
     try {
         const { model, year } = req.body;
+        if (!model) {
+            return res.status(400).json({ error: "Model is required" });
+        }
+        if (!year) {
+            return res.status(400).json({ error: "Year is required" });
+        }
+        if (isNaN(year)) {
+            return res.status(400).json({ error: "Year must be a number" });
+        }
+        if (year < 0) {
+            return res.status(400).json({ error: "Year cannot be negative" });
+        }
         const result = calculateCarValue(model, year);
         // Check if there is an error in the result object
         if ("error" in result) {
