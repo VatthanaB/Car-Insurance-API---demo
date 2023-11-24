@@ -5,7 +5,7 @@ const router = express.Router();
 // API 2. Convert "Claim History" to a "Risk Rating"
 
 // This function will calculate the risk rating based on the claim history
-function calculateRiskRating(claimHistory) {
+export function calculateRiskRating(claimHistory) {
   try {
     // Check for invalid input
     if (typeof claimHistory !== "string") {

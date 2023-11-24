@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha ./test/apis.test.js",
+    "test": "mocha ./test/calculatingRisk.test.js",
     "heroku-postbuild": "npm test"
   },
   "keywords": [],
@@ -22,7 +22,9 @@
     "mocha": "^10.2.0",
     "nodemon": "^3.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nock": "^13.3.8"
+  },
   "engines": {
     "node": "21.1.0",
     "npm": "10.2.4"
