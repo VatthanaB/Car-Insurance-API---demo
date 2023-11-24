@@ -4,7 +4,8 @@ import { expect } from "chai";
 import dotenv from "dotenv";
 dotenv.config();
 
-const URL = process.env.URL || "http://localhost:5000";
+const URL =
+  process.env.URL || "https://mission-1-backend-2706258f78a4.herokuapp.com/";
 
 // using chai :
 // describe keyword = group of tests
