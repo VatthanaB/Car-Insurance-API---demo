@@ -34,23 +34,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v2 # This actions copy the repository on the environment
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This action deploys the content on Heroku
         with:
-          node-version: "14"
-
-      - name: Install Heroku CLI
-        run: curl https://cli-assets.heroku.com/install.sh | sh
-
-      - name: Login to Heroku
-        run: heroku auth:token
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-
-      - name: Deploy to Heroku
-        run: |
-          heroku create
-          git push heroku main
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}} #The Heroku api key we stored on our repo secret
+          heroku_app_name: "mission-1-backend" #The name of your heroku app - Must be unique in Heroku
+          heroku_email: "boulom.vatthana@gmail.com" #Your heroku yuser name
