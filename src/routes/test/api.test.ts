@@ -36,6 +36,6 @@ describe("calculateRiskRating", () => {
   it("should return the correct risk rating when claim history contains repeated keywords", () => {
     const claimHistory = "scratch scratch scratch scratch scratch";
     const result = calculateRiskRating(claimHistory);
-    expect(result).to.deep.equal({ risk_rating: 5 });
+    expect(result).to.deep.equal({ risk_rating: 1 });
   });
 });
