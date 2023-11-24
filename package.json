@@ -7,7 +7,7 @@
   "scripts": {
     "start": "tsc && node dist/server.js",
     "test": "mocha dist/routes/test/api.test.js",
-    "heroku-postbuild": "npm run build && npm test",
+    "heroku-postbuild": "tsc",
     "build": "tsc"
   },
   "keywords": [],
@@ -24,6 +24,7 @@
     "nodemon": "^3.0.1"
   },
   "devDependencies": {
+    "typescript": "^4.5.2",
     "@types/chai": "^4.3.11",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
