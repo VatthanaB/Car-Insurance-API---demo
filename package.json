@@ -7,7 +7,6 @@
   "scripts": {
     "start": "tsc && node dist/server.js",
     "test": "mocha dist/routes/test/api.test.js",
-    "heroku-postbuild": "tsc",
     "build": "tsc"
   },
   "keywords": [],
