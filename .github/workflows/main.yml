@@ -41,9 +41,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "14"
-       - name: Set up environment variables
-        run: |
-          echo "URL=https://mission-1-backend-2706258f78a4.herokuapp.com >> $GITHUB_ENV
 
       - name: Install Heroku CLI
         run: curl https://cli-assets.heroku.com/install.sh | sh
