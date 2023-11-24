@@ -1,4 +1,4 @@
-name: Deploy to Heroku
+name: Deploy to Heroku and Test API
 
 on:
   push:
@@ -20,6 +20,12 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+
+      - name: Start API Server
+        run: npm start &
+
+      - name: Wait for API Server to Start
+        run: sleep 10s
 
       - name: Run Unit Tests
         run: npm test
