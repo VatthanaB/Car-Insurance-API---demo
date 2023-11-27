@@ -29,8 +29,9 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
-  "devDependencies": {
-    "nyc": "^15.1.0"
+  "devDependencies": {},
+  "nyc": {
+    "report-dir": "./coverage"
   },
   "engines": {
     "node": "21.1.0",
