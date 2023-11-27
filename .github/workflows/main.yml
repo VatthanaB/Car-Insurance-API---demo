@@ -24,9 +24,6 @@ jobs:
       - name: Start API Server
         run: npm start &
 
-      - name: Wait for API Server to Start
-        run: sleep 10s
-
       - name: Run Unit Tests with Coverage
         run: npm test
 
