@@ -28,7 +28,7 @@ jobs:
         run: npm start &
 
       - name: Run Unit Tests with Coverage
-        run: nyc npm test
+        run: nyc npm test --verbose
       - name: Archive code coverage results
         uses: actions/upload-artifact@v3
         with:
