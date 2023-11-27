@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "tsc && node dist/server.js",
-    "test": "nyc mocha dist/routes/test/api.test.js",
+    "test": "mocha dist/routes/test/api.test.js",
     "build": "tsc"
   },
   "keywords": [],
